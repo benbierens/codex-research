@@ -22,7 +22,7 @@ A new design
 
 We propose to create new type of storage contract, containing a number of slots.
 Each of these slots represents an agreement with a storage host to store a part
-of the content. When a client wants store data on the network with durability
+of the content. When a client wants to store data on the network with durability
 guarantees, it posts a storage contract on the blockchain. Hosts that want to
 offer storage can fill a slot in the contract.
 
@@ -56,7 +56,7 @@ including a small amount of host losses that can be tolerated.
 
       cid                             # content identifier
 
-      reward                          # tokens payed per second per filled slot
+      reward                          # tokens paid per second per filled slot
       collateral                      # amount of collateral required per host
 
       proof probability               # frequency at which proofs are required
@@ -65,7 +65,7 @@ including a small amount of host losses that can be tolerated.
       dispersal                       # dispersal parameter
       repair reward                   # amount of tokens paid for repairs
 
-      hosts                           # amount of storage hosts (including loss)
+      hosts                           # number of storage hosts (including loss)
       loss                            # number of allowed host losses
 
       slots                           # assigned host slots
@@ -107,7 +107,7 @@ reserved for repairs. An empty slot can be filled again once another host
 submits a correct proof together with collateral. Payouts for the time interval
 that a slot is empty are burned.
 
-Payouts for all hosts are accumulated in the contract and payed out at contract
+Payouts for all hosts are accumulated in the contract and paid out at contract
 end. This is to ensure that the incentive posed by the collateral is not
 diminished over time.
 
